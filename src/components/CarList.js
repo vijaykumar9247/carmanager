@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import { Link } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext';
 
@@ -7,27 +7,28 @@ const CarList = () => {
   const [searchTerm, setSearchTerm] = useState('');
   const { token } = useAuth();
 
-  const fetchCars = async () => {
+  const fetchCars = useCallback(async () => {
     try {
       const url = searchTerm
         ? `https://carmanagment.onrender.com/api/cars/search?keyword=${searchTerm}`
-        : 'https://carmanagment.onrender.com/api/cars/getAllcars';
-      
+        : 'https://carmanagment.onrender.com/api/cars/getcars';
+
       const response = await fetch(url, {
         headers: {
           'Authorization': `Bearer ${token}`
         }
       });
       const data = await response.json();
+      console.log("cars data: ", data);
       setCars(data);
     } catch (err) {
       console.error('Failed to fetch cars:', err);
     }
-  };
+  }, [searchTerm, token]);
 
   useEffect(() => {
     fetchCars();
-  }, [searchTerm, token]);
+  }, [fetchCars]);
 
   const handleDelete = async (id) => {
     if (window.confirm('Are you sure you want to delete this car?')) {
@@ -70,18 +71,21 @@ const CarList = () => {
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         {cars.map((car) => (
           <div key={car._id} className="bg-white p-4 rounded-lg shadow">
-            {car.images && car.images.length > 0 && (
-              <img
-                src={car.images[0]}
-                alt={car.title}
-                className="w-full h-48 object-cover rounded mb-4"
-              />
-            )}
+            <div className="grid grid-cols-3 gap-2 mb-4">
+              {car.images && car.images.map((image, index) => (
+                <img
+                  key={index}
+                  src={image}
+                  alt={`${car.title} image ${index + 1}`}
+                  className="w-full h-24 object-cover rounded"
+                />
+              ))}
+            </div>
             <h3 className="text-xl font-semibold mb-2">{car.title}</h3>
             <p className="text-gray-600 mb-2">{car.description}</p>
-            <p className="text-gray-600 mb-2">Dealer: {car.dealer}</p>
-            <p className="text-gray-600 mb-2">Company: {car.company}</p>
-            <p className="text-gray-600 mb-4">Type: {car.car_type}</p>
+            <p className="text-gray-600 mb-2">Dealer: {car.tags.dealer}</p>
+            <p className="text-gray-600 mb-2">Company: {car.tags.company}</p>
+            <p className="text-gray-600 mb-4">Type: {car.tags.car_type}</p>
             
             <div className="flex justify-between">
               <Link

@@ -17,6 +17,7 @@ const Login = () => {
         body: JSON.stringify(formData)
       });
       const data = await response.json();
+      console.log("login data: ", data);
       
       if (data.token) {
         login(data.user, data.token);
