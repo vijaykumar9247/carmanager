@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import { Link } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext';
-
+import '../CarList.css';
 const CarList = () => {
   const [cars, setCars] = useState([]);
   const [searchTerm, setSearchTerm] = useState('');
@@ -50,12 +50,7 @@ const CarList = () => {
     <div>
       <div className="flex justify-between items-center mb-6">
         <h2 className="text-2xl font-bold">Cars List</h2>
-        <Link
-          to="/add-car"
-          className="bg-green-500 text-white px-4 py-2 rounded hover:bg-green-600"
-        >
-          Add New Car
-        </Link>
+        
       </div>
 
       <div className="mb-4">

@@ -1,0 +1,207 @@
+/* Main Layout */
+.container {
+    padding: 2rem;
+    background-color: #f0f4f8;
+  }
+  
+  .flex {
+    display: grid;
+  }
+  
+  .justify-between {
+    justify-content: space-between;
+  }
+  
+  .items-center {
+    align-items: center;
+  }
+  
+  .mb-6 {
+    margin-bottom: 1.5rem;
+  }
+  
+  /* Header */
+  .text-2xl {
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+  
+  /* Button Styles */
+  .bg-green-500 {
+    background-color: #38a169;
+  }
+  
+  .bg-green-600:hover {
+    background-color: #2f855a;
+  }
+  
+  .text-white {
+    color: white;
+  }
+  
+  .px-4 {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+  
+  .py-2 {
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+  }
+  
+  .rounded {
+    border-radius: 0.375rem;
+  }
+  
+  /* Search Input */
+  .w-full {
+    width: 10%;
+  }
+  
+  .p-2 {
+    padding: 0.5rem;
+  }
+  
+  .border {
+    border: 1px solid #d2d6dc;
+  }
+  
+  /* Car Cards */
+  .grid {
+    display: grid;
+  }
+  
+  .grid-cols-1 {
+    grid-template-columns: 1fr;
+  }
+  
+  .md\:grid-cols-2 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .lg\:grid-cols-3 {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  
+  .gap-6 {
+    gap: 1.5rem;
+  }
+  
+  .bg-white {
+    background-color: white;
+  }
+  
+  .shadow {
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .p-4 {
+    padding: 1rem;
+  }
+  
+  .rounded-lg {
+    border-radius: 0.5rem;
+  }
+  
+  /* Image Styling */
+  .image-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  .image-grid img {
+    width: 50%;
+    height: 80px; /* Adjusted for smaller image size */
+    object-fit: cover;
+    border-radius: 0.25rem;
+  }
+  
+  /* Card Content */
+  .text-xl {
+    font-size: 0.85rem;
+  }
+  
+  .font-semibold {
+    font-weight: 600;
+  }
+  
+  .text-gray-600 {
+    color: #718096;
+  }
+  
+  .mb-2 {
+    margin-bottom: 0.5rem;
+  }
+  
+  .mb-4 {
+    margin-bottom: 1rem;
+  }
+  
+  /* Action Buttons */
+  .bg-blue-500 {
+    background-color: #4299e1;
+  }
+  
+  .bg-blue-600:hover {
+    background-color: #3182ce;
+  }
+  
+  .bg-red-500 {
+    background-color: #f56565;
+  }
+  
+  .bg-red-600:hover {
+    background-color: #e53e3e;
+  }
+  
+  .flex {
+    display: flex;
+    justify-content: space-between;
+  }
+  /* Login and Signup Buttons */
+.btn-login {
+    background-color: #4a90e2;
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 0.375rem;
+    font-weight: 600;
+    text-align: center;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+  }
+  
+  .btn-login:hover {
+    background-color: #357ABD;
+  }
+  
+  .btn-signup {
+    background-color: #f56565;
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 0.375rem;
+    font-weight: 600;
+    text-align: center;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+  }
+  
+  .btn-signup:hover {
+    background-color: #c53030;
+  }
+  
+  /* Button Container */
+  .auth-buttons {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+  }
+  /* Position Add Car button at the bottom */
+.add-car-button-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+    padding-bottom: 2rem;
+  }
+  

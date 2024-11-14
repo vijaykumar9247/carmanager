@@ -1,0 +1,107 @@
+/* Login.css */
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f4f8;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+  }
+  
+  .max-w-md {
+    max-width: 400px;
+    width: 100%;
+    margin: auto;
+  }
+  
+  .bg-white {
+    background-color: #ffffff;
+  }
+  
+  .p-8 {
+    padding: 2rem;
+  }
+  
+  .rounded-lg {
+    border-radius: 0.5rem;
+  }
+  
+  .shadow-md {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .text-2xl {
+    font-size: 1.75rem;
+  }
+  
+  .font-bold {
+    font-weight: bold;
+  }
+  
+  .mb-6 {
+    margin-bottom: 1.5rem;
+  }
+  
+  .text-red-500 {
+    color: #e53e3e;
+  }
+  
+  .mb-4 {
+    margin-bottom: 1rem;
+  }
+  
+  .block {
+    display: block;
+  }
+  
+  .text-gray-700 {
+    color: #4a5568;
+  }
+  
+  .w-full {
+    width: 100%;
+  }
+  
+  .p-2 {
+    padding: 0.5rem;
+  }
+  
+  .border {
+    border: 1px solid #e2e8f0;
+  }
+  
+  .rounded {
+    border-radius: 0.25rem;
+  }
+  
+  .bg-blue-500 {
+    background-color: #4299e1;
+  }
+  
+  .text-white {
+    color: #ffffff;
+  }
+  
+  .hover\:bg-blue-600:hover {
+    background-color: #3182ce;
+  }
+  
+  .cursor-pointer {
+    cursor: pointer;
+  }
+  
+  .transition {
+    transition: background-color 0.3s ease;
+  }
+  
+  /* Center container on the screen */
+  .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  

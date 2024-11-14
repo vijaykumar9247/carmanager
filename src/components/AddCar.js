@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext';
-
+import '../AddCar.css';
 const AddCar = () => {
   const navigate = useNavigate();
   const { token } = useAuth();
@@ -186,7 +186,7 @@ const AddCar = () => {
 
         {/* Image Upload */}
         <div>
-          <label className="block text-gray-700 font-medium mb-2">
+          <label className="block text-gray-200 font-medium mb-2">
             Images
           </label>
           <div className="mt-2">
@@ -243,7 +243,8 @@ const AddCar = () => {
               isLoading ? 'opacity-50 cursor-not-allowed' : ''
             }`}
           >
-            {isLoading ? 'Adding...' : 'Add Car'}
+            {isLoading ? 'Adding...' : 'Adding Car'}
+            Addcar
           </button>
         </div>
       </form>
